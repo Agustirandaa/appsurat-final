@@ -127,9 +127,12 @@
                             <input type="hidden" name="slug" class="form-control mt-2" id="slug" value="{{ old('slug') }}"  aria-describedby="slug" required readonly>
                         </div>
                         <div class="col-sm-6 form-group mb-2 d-flex justify-content-end">
-                            <a href="/transaksi/surat-masuk/" role="button" class="btn btn-light fw-bolder me-4 d-flex align-items-center"> <i class='bx bx-left-arrow-alt fs-4'></i> Kembali </a>
-                            <button type="submit" class="btn btn-primary fw-bolder d-flex align-items-center"> Tambah 
-                                <i class='bx bx-plus fs-4 ms-1'></i>
+                            <a href="/transaksi/surat-masuk/" role="button" class="btn btn-light fw-bolder me-4 "> 
+                                <i class='bi bi-arrow-left'></i> 
+                                Kembali 
+                            </a>
+                            <button type="submit" class="btn btn-primary fw-bolder"> Tambah 
+                                <i class='bi bi-plus-lg'></i>
                             </button>
                         </div>
                     </div>

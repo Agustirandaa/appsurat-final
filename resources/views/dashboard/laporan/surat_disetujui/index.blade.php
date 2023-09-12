@@ -8,7 +8,7 @@
 
 @if (session()->has('success'))
 <div class="alert alert-warning alert-dismissible fade show col-lg-5 d-flex align-items-center" role="alert">
-    <i class='bx bx-envelope-open me-3 fs-4'></i>
+    <i class='bi bi-envelope-open me-3 fs-4'></i>
     {{ session('success') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>  
@@ -30,7 +30,7 @@
             <div class="col-sm-3">
                 <div class="input-group">     
                     <input type="text" class="form-control border-0" name="search" id="searchInput" placeholder="Search..." aria-label="Search" aria-describedby="search" autocomplete="off">
-                    <span class="input-group-text border-0 bg-white" id="search"><i class='bx bx-search'></i></span>
+                    <span class="input-group-text border-0 bg-white" id="search"><i class='bi bi-search'></i></span>
                 </div>
             </div>
             

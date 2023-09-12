@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmailSuratMasuk;
 use App\Models\User;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class TransaksiSuratMasukController extends Controller
 {
@@ -54,7 +56,11 @@ class TransaksiSuratMasukController extends Controller
             'semester' => 'required',
         ]);
 
-        $validateData['image'] = $request->file('image')->store('suratmasuk-images');
+        // $validateData['image'] = $request->file('image')->store('suratmasuk-images');
+        $image = Str::random(100) . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(public_path() . '/suratmasuk-images/', $image);
+        $validateData['image'] = $image;
+
         SuratMasuk::create($validateData);
 
         // Set data dalam email
@@ -117,9 +123,11 @@ class TransaksiSuratMasukController extends Controller
         if ($request->file('image')) {
             // jika ada image baru, hapus image lama di folder storage
             if ($request->oldImage) {
-                Storage::delete($request->oldImage);
+                File::delete(public_path() . '/suratmasuk-images/' . $request->oldImage);
             }
-            $validateData['image'] = $request->file('image')->store('suratmasuk-images');
+            $image = Str::random(100) . '.' . $request->file('image')->getClientOriginalExtension();
+            $request->file('image')->move(public_path() . '/suratmasuk-images/', $image);
+            $validateData['image'] = $image;
         }
 
         SuratMasuk::where('id', $suratMasuk->id)
@@ -136,7 +144,7 @@ class TransaksiSuratMasukController extends Controller
     {
         // Delete beserta gambar
         if ($suratMasuk->image) {
-            Storage::delete($suratMasuk->image);
+            File::delete(public_path() . '/suratmasuk-images/' . $suratMasuk->image);
         }
         SuratMasuk::destroy($suratMasuk->id);
         return redirect('/transaksi/surat-masuk')

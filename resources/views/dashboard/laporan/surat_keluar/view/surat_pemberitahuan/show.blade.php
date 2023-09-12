@@ -7,8 +7,8 @@
 </div>
 <div class="row mt-4">
     <div class="col d-flex justify-content-end">
-        <a href="{{ request('from') }}" role="button" class="btn btn-primary fw-bolder d-flex align-items-center me-4"> 
-            <i class='bx bx-left-arrow-alt fs-5'></i> Kembali
+        <a href="{{ request('from') }}" role="button" class="btn btn-primary fw-bolder"> 
+            <i class='bi bi-arrow-left'></i> Kembali
         </a>  
     </div>
 </div>
@@ -200,8 +200,8 @@
             View Surat
         </div>
         <div class="col-md-1 p-3">
-            <a href="{{ route('viewpdf', ['slug' => $surat->slug, 'jenis' => $surat->jenis_surat, 'status' => $surat->status]) }}" target="_blank" role="button" class="btn btn-primary fw-bolder d-flex align-items-center me-3"> 
-                <i class='bx bx-show-alt fs-5 d-flex align-items-center me-1'></i> View 
+            <a href="{{ route('viewpdf', ['slug' => $surat->slug, 'jenis' => $surat->jenis_surat, 'status' => $surat->status]) }}" target="_blank" role="button" class="btn btn-primary fw-bolder"> 
+                <i class='bi bi-eye'></i> View 
             </a>
         </div>
     </div>

@@ -8,15 +8,15 @@
 
 <div class="row mt-4">
     <div class="col d-flex justify-content-end ali">
-        <a href="{{ request('from') }}" role="button" class="btn btn-primary fw-bolder d-flex align-items-center me-4"> 
-            <i class='bx bx-left-arrow-alt fs-5'></i> Kembali
+        <a href="{{ request('from') }}" role="button" class="btn btn-primary fw-bolder me-4"> 
+            <i class='bi bi-arrow-left'></i> Kembali
         </a>
     </div>
 </div>
 <div class="content-header mt-4 mb-2 rounded-top">
     <div class="row">
-        <div class="col text-white d-flex align-items-center fs">
-            <i class='bx bx-envelope-open me-3 fs-4'></i>
+        <div class="col text-white fs">
+            <i class='bi bi-envelope-open me-3 fs-4'></i>
             <span>{{ $surat->nomor_surat }}</span>
         </div>
     </div>
@@ -40,6 +40,15 @@
         </div>
         <div class="col bg-sky p-3 sifat-surat">
             {{ $surat->sifat_surat }}
+        </div>
+    </div>
+    
+    <div class="row gap-3 mb-2 d-flex align-content-center fs">
+        <div class="col-md-3 bg-sky p-3 fw-bold">
+            Jenis Surat
+        </div>
+        <div class="col bg-sky p-3">
+            {{ $surat->jenis_surat }}
         </div>
     </div>
     
@@ -99,10 +108,28 @@
     
     <div class="row gap-3 mb-2 d-flex align-content-center fs">
         <div class="col-md-3 bg-sky p-3 fw-bold">
+            Disposisi
+        </div>
+        <div class="col bg-sky p-3">
+            {{ $surat->disposisi }}
+        </div>
+    </div>
+    
+    <div class="row gap-3 mb-2 d-flex align-content-center fs">
+        <div class="col-md-3 bg-sky p-3 fw-bold">
+            Catatan Disposisi
+        </div>
+        <div class="col bg-sky p-3">
+            {{ $surat->catatan_disposisi }}
+        </div>
+    </div>
+    
+    <div class="row gap-3 mb-2 d-flex align-content-center fs">
+        <div class="col-md-3 bg-sky p-3 fw-bold">
             Image
         </div>
         <div class="col bg-sky p-3">
-            <img src="{{ asset('storage/'. $surat->image) }}" class="img-fluid" alt="...">
+            <img src="{{ asset('suratmasuk-images/'. $surat->image) }}" class="img-fluid" alt="...">
         </div>
     </div>
 </div>

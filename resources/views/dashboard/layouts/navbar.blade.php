@@ -14,7 +14,7 @@ $showDotNotif = $jumlahSuratBelumDidisposisi + $jumlahSuratBelumDicek + $jumlahS
         
         <div class="col">
             <div class="menu-btn">
-                <i class='bx bx-menu'></i>
+                <i class='bi bi-list'></i>
             </div>
         </div>
         <div class="col d-flex justify-content-end">

@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Administrator',
             'username' => 'administrator',
             'email' => 'administrator@gmail.com',
-            'password' => bcrypt('admin'),
+            'password' => bcrypt('prodi.ti.appsuratti'),
             'level' => 'is_admin'
         ]);
     }

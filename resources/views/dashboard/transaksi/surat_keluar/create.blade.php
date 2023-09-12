@@ -26,10 +26,8 @@
     </div>
 </div>
 
-
-@include('dashboard.transaksi.surat_keluar.createsurat.form_suratpermohonan')
-@include('dashboard.transaksi.surat_keluar.createsurat.form_suratketerangan')
-@include('dashboard.transaksi.surat_keluar.createsurat.form_suratpemberitahuan')
-{{-- @include('dashboard.transaksi.surat_keluar.layouts.subCreateSuratKeterangan') --}}
+@include('dashboard.transaksi.surat_keluar.createSurat.form_suratPermohonan')
+@include('dashboard.transaksi.surat_keluar.createSurat.form_suratKeterangan')
+@include('dashboard.transaksi.surat_keluar.createSurat.form_suratPemberitahuan')
 
 @endsection

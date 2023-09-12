@@ -23,7 +23,7 @@
 <div class="row mt-4">
     <div class="col-md-3 p-2 d-flex justify-content-center">
         <div class="card p-3 bg-sky d-flex align-items-center justify-content-center">
-            <img src="{{ auth()->user()->image ? asset('storage/' . auth()->user()->image) : asset('img/not_image.png') }}" alt="User Image" class="img-fluid" style="max-width: 50%">  
+            <img src="{{ auth()->user()->image ? asset('user-images/' . auth()->user()->image) : asset('img/not_image.png') }}" alt="User Image" class="img-fluid" style="max-width: 50%">  
         </div>
     </div>
     <div class="col-md-8 p-2">

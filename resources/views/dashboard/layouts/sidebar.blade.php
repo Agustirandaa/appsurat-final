@@ -60,10 +60,10 @@
                         @endauth
                     </a>
                     <ul class="dropdown-menu text-bg-primary">
-                        <li><a class="dropdown-item text-bg-primary" href="{{ route('userprofile') }}"><i class='bx bx-user'></i>User Profile</a></li>
-                        <li><a class="dropdown-item text-bg-primary" href="{{ route('setpassword') }}"><i class='bx bx-key'></i>Ubah Password</a></li>
+                        <li><a class="dropdown-item text-bg-primary" href="{{ route('userprofile') }}"><i class='bi bi-person'></i>User Profile</a></li>
+                        <li><a class="dropdown-item text-bg-primary" href="{{ route('setpassword') }}"><i class='bi bi-key'></i>Ubah Password</a></li>
                         <hr class="dropdown-divider">
-                        <li><a class="dropdown-item text-bg-primary" href="#" data-bs-toggle="modal" data-bs-target="#modalLogout"><i class='bx bx-log-out-circle'></i>Logout</a></li>
+                        <li><a class="dropdown-item text-bg-primary" href="#" data-bs-toggle="modal" data-bs-target="#modalLogout"><i class='bi bi-escape'></i>Logout</a></li>
                     </ul>
                 </div>
             </div>

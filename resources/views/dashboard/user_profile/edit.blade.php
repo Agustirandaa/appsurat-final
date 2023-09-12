@@ -16,7 +16,7 @@
                 <div class="card p-3 bg-sky d-flex align-items-center">
                     <input type="hidden" name="oldImage" value="{{ auth()->user()->image }}">
                     @if ( auth()->user()->image )
-                    <img src="{{ asset('storage/'.auth()->user()->image) }}" class="card-img-top img-preview img-fluid" style="max-width: 50%;">
+                    <img src="{{ asset('user-images/'.auth()->user()->image) }}" class="card-img-top img-preview img-fluid" style="max-width: 50%;">
                     @else
                     <img class="img-preview img-fluid mb-3 col-sm-5">
                     @endif

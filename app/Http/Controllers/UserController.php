@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class UserController extends Controller
 {
@@ -55,7 +57,13 @@ class UserController extends Controller
         ]);
 
         $validateData['password'] = bcrypt($validateData['password']);
-        $validateData['image'] = $request->file('image')->store('user-images');
+
+        // $validateData['image'] = $request->file('image')->store('user-images');
+
+        $image = Str::random(100) . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(public_path() . '/user-images/', $image);
+        $validateData['image'] = $image;
+
         User::create($validateData);
         return redirect('/dashboard/pengaturan')
             ->with('success', 'New user has been added!');
@@ -106,10 +114,10 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         if ($user->image) {
-            Storage::delete($user->image);
+            File::delete(public_path() . '/user-images/' . $user->image);
         }
         User::destroy($user->id);
         return redirect('/dashboard/pengaturan')
-            ->with('success', 'User been deleted!');
+            ->with('success', 'User has been deleted!');
     }
 }

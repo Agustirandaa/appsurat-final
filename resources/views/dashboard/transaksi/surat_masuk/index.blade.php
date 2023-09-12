@@ -8,7 +8,7 @@
 
 @if (session()->has('success'))
 <div class="alert alert-warning alert-dismissible fade show col-lg-5 d-flex align-items-center" role="alert">
-    <i class='bx bx-envelope-open me-3 fs-4'></i>
+    <i class='bi bi-envelope-open me-3 fs-5'></i>
     {{ session('success') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>  
@@ -27,13 +27,13 @@
         </div>
         <div class="col-sm-3">
             <div class="input-group">     
-                <span class="input-group-text border-0 bg-white" id="search"><i class='bx bx-search'></i></span>
+                <span class="input-group-text border-0 bg-white" id="search"><i class='bi bi-search'></i></span>
                 <input type="text" class="form-control border-0" name="search" id="searchInput" placeholder="Search..." aria-label="Search" aria-describedby="search" autocomplete="off">
             </div>  
         </div>
         <div class="col">
             <div class="d-flex justify-content-end">
-                <a href="/transaksi/surat-masuk/create" role="button" class="btn btn-light fw-bolder d-flex align-items-center"> Tambah <i class='bx bx-plus-medical ms-1'></i> </a>
+                <a href="/transaksi/surat-masuk/create" role="button" class="btn btn-light fw-bolder"> Tambah <i class='bi bi-plus-lg'></i> </a>
             </div>
         </div>
     </div>
@@ -70,16 +70,26 @@
                 <td class="py-2 px-4">
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class='bx bx-menu btn-menu'></i>
+                            <i class='bi bi-list btn-menu'></i>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/transaksi/surat-masuk/{{ $data->slug }}/edit"><i class='btn btn-success bx bx-edit-alt'></i></a></li>
+                            <li>
+                                <a class="dropdown-item" href="/transaksi/surat-masuk/{{ $data->slug }}/edit">
+                                    <i class='btn btn-success bi bi-pencil'></i>
+                                </a>
+                            </li>
                             
-                            <li><button type="button" class="dropdown-item deletedModalSuratMasuk" data-slug="/transaksi/surat-masuk/{{ $data->slug }}" data-nomor="{{ $data->nomor_surat }}">
-                                <i class='btn btn-danger bx bx-trash'></i>
-                            </button></li>
+                            <li>
+                                <button type="button" class="dropdown-item deletedModalSuratMasuk" data-slug="/transaksi/surat-masuk/{{ $data->slug }}" data-nomor="{{ $data->nomor_surat }}">
+                                    <i class='btn btn-danger bi bi-trash3'></i>
+                                </button>
+                            </li>
                             
-                            <li><a class="dropdown-item" href="/laporan/surat-masuk/{{ $data->slug }}?from=/transaksi/surat-masuk"><i class='btn btn-warning bx bx-detail'></i></a></li>
+                            <li>
+                                <a class="dropdown-item" href="/laporan/surat-masuk/{{ $data->slug }}?from=/transaksi/surat-masuk">
+                                    <i class='btn btn-warning bi bi-card-list'></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>  
                 </td>

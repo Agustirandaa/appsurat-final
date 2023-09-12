@@ -111,7 +111,7 @@
                                 <label for="image"> Upload file</label>
                                 <input type="hidden" name="oldImage" value="{{ $surat->image }}">
                                 @if ( $surat->image )
-                                <img src="{{ asset('storage/'.$surat->image) }}" class="img-preview img-fluid mb-3 mt-3 d-block col-sm-9">
+                                <img src="{{ asset('suratmasuk-images/'.$surat->image) }}" class="img-preview img-fluid mb-3 mt-3 d-block col-sm-9">
                                 @else
                                 <img class="img-preview img-fluid mb-3 col-sm-5">
                                 @endif
@@ -131,11 +131,11 @@
                                 @enderror
                             </div>
                             <div class="col-sm-6 form-group mb-2 d-flex justify-content-end">
-                                <a href="/transaksi/surat-masuk/" role="button" class="btn btn-light fw-bolder d-flex align-items-center me-4"> 
-                                    <i class='bx bx-left-arrow-alt fs-4'></i> Kembali 
+                                <a href="/transaksi/surat-masuk/" role="button" class="btn btn-light fw-bolder me-4"> 
+                                    <i class='bi bi-arrow-left'></i> Kembali 
                                 </a>
                                 <button type="submit" class="btn btn-primary d-flex align-items-center fw-bolder"> Update 
-                                    <i class='bx bx-refresh fs-4 ms-1'></i>
+                                    <i class='bi bi-arrow-repeat ms-1'></i>
                                 </button>
                             </div>
                         </div>

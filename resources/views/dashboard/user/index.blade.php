@@ -8,7 +8,7 @@
 
 @if (session()->has('success'))
 <div class="alert alert-warning alert-dismissible fade show col-lg-5 d-flex align-items-center" role="alert">
-    <i class='bx bx-envelope-open me-3 fs-4'></i>
+    <i class='bi bi-person-circle me-3 fs-5'></i>
     {{ session('success') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>  
@@ -16,8 +16,10 @@
 
 
 <div class="row my-4">
-    <div class="col-1 d-flex justify-content-center">
-        <a href="/dashboard/pengaturan/create" role="button" class="btn btn-primary fw-bolder d-flex align-items-center"> Tambah <i class='bx bx-plus-medical ms-1'></i> </a>
+    <div class="col">
+        <a href="/dashboard/pengaturan/create" role="button" class="btn btn-primary fw-bold"> Tambah 
+            <i class="bi bi-plus-lg fw-bolder"></i>
+        </a>
     </div>
 </div>
 

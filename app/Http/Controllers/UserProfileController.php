@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class UserProfileController extends Controller
 {
@@ -37,13 +39,15 @@ class UserProfileController extends Controller
 
         $user = User::findOrFail($id); // Mencari user berdasarkan ID
 
-        if ($request->hasFile('image')) {
-            // Jika ada gambar baru, hapus gambar lama di folder storage
+        // Cek image
+        if ($request->file('image')) {
+            // jika ada image baru, hapus image lama di folder storage
             if ($user->image) {
-                Storage::delete($user->image);
+                File::delete(public_path() . '/user-images/' . $user->image);
             }
-            $imagePath = $request->file('image')->store('user-images');
-            $validateData['image'] = $imagePath;
+            $image = Str::random(100) . '.' . $request->file('image')->getClientOriginalExtension();
+            $request->file('image')->move(public_path() . '/user-images/', $image);
+            $validateData['image'] = $image;
         }
 
         $user->update($validateData);

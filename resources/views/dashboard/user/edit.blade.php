@@ -65,9 +65,12 @@
                     
                     <div class="row mt-3">
                         <div class="col-sm-12 form-group mb-2 d-flex justify-content-end">
-                            <a href="/dashboard/pengaturan/" role="button" class="btn btn-light fw-bolder me-4 d-flex align-items-center"> <i class='bx bx-left-arrow-alt fs-4'></i> Kembali </a>
-                            <button type="submit" class="btn btn-primary fw-bolder d-flex align-items-center"> Update 
-                                <i class='bx bx-refresh fs-4 ms-1'></i>
+                            <a href="/dashboard/pengaturan/" role="button" class="btn btn-light fw-bolder me-4"> 
+                                <i class='bi bi-arrow-left'></i> 
+                                Kembali 
+                            </a>
+                            <button type="submit" class="btn btn-primary fw-bolder"> Update 
+                                <i class="bi bi-arrow-repeat fw-bolder"></i>
                             </button>
                         </div>
                     </div>

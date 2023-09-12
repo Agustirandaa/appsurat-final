@@ -150,15 +150,15 @@
                     </div>          
                     
                     <div class="row mb-4">       
-                        <input type="text" name="slug" value="{{ $surat->slug }}" class="form-control" id="slug" aria-describedby="slug" readonly>      
+                        <input type="hidden" name="slug" value="{{ $surat->slug }}" class="form-control" id="slug" aria-describedby="slug" readonly>      
                         <div class="col form-group mb-3 d-flex justify-content-start">
-                            <a href="/transaksi/surat-keluar" role="button" class="btn btn-light fw-bolder d-flex align-items-center">
-                                <i class='bx bx-left-arrow-alt me-1 fs-5'></i> Kembali 
+                            <a href="/transaksi/surat-keluar" role="button" class="btn btn-light fw-bolder">
+                                <i class='bi bi-arrow-left'></i> Kembali 
                             </a>
                         </div>
                         <div class="col form-group mb-3 d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary d-flex align-items-center fw-bolder"> Update 
-                                <i class='bx bx-refresh fs-4 ms-1'></i>
+                            <button type="submit" class="btn btn-primary fw-bolder"> Update 
+                                <i class='bi bi-arrow-repeat'></i>
                             </button>
                         </div>
                     </div>

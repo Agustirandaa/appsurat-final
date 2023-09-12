@@ -9,8 +9,8 @@
 
 <div class="row mt-4">
     <div class="col d-flex justify-content-end">
-        <a href="/laporan/surat-keluar" role="button" class="btn btn-primary fw-bolder d-flex align-items-center me-4"> 
-            <i class='bx bx-left-arrow-alt fs-5'></i> Kembali
+        <a href="/laporan/surat-keluar" role="button" class="btn btn-primary fw-bolder"> 
+            <i class='bi bi-arrow-left'></i> Kembali
         </a>
     </div>
 </div>
@@ -39,8 +39,8 @@
                         
                         <div class="col-sm-2 form-group mb-2">
                             <label for="" class="form-label">View Surat</label>
-                            <a href="{{ route('viewpdf', ['slug' => $surat->slug,'jenis' => $surat->jenis_surat, 'status' => $surat->status ])}}" target="_blank" role="button" class="btn btn-primary fw-bolder d-flex align-items-center me-3"> 
-                                <i class='bx bx-show-alt fs-5 d-flex align-items-center me-1'></i> View 
+                            <a href="{{ route('viewpdf', ['slug' => $surat->slug,'jenis' => $surat->jenis_surat, 'status' => $surat->status ])}}" target="_blank" role="button" class="btn btn-primary fw-bolder"> 
+                                <i class='bi bi-eye'></i> View 
                             </a>
                         </div>  
                     </div>

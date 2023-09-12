@@ -8,7 +8,7 @@
 
 @if (session()->has('success'))
 <div class="alert alert-warning alert-dismissible fade show col-lg-5 d-flex align-items-center" role="alert">
-    <i class='bx bx-envelope-open me-3 fs-4'></i>
+    <i class='bi bi-envelope-open me-3 fs-5'></i>
     {{ session('success') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>  
@@ -17,7 +17,7 @@
 {{-- Untuk cetak laporan --}}
 @if (session()->has('error'))
 <div class="alert alert-danger alert-dismissible fade show col-lg-5 d-flex align-items-center" role="alert">
-    <i class='bx bx-envelope-open me-3 fs-4'></i>
+    <i class='bi bi-envelope-open me-3 fs-5'></i>
     {{ session('error') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>  
@@ -43,13 +43,13 @@
         <div class="col d-flex justify-content-end">  
             <div class="col-1">
                 <a href="{{ route('printsuratkeluar', ['start_date' => request('start_date'), 'end_date' => request('end_date'), 'semester' => request('semester')]) }}" target="_blank" role="button" class="btn btn-light">
-                    <i class='bx bx-printer'></i>
+                    <i class='bi bi-printer'></i>
                 </a>      
             </div>
             <div class="col-lg-3">
                 <div class="input-group">     
                     <input type="text" class="form-control border-0" name="search" id="searchInput"  placeholder="Search..." aria-label="Search" aria-describedby="search" autocomplete="off">
-                    <span class="input-group-text border-0 bg-white" id="search"><i class='bx bx-search'></i></span>
+                    <span class="input-group-text border-0 bg-white" id="search"><i class='bi bi-search'></i></span>
                 </div>
             </div> 
         </div>
@@ -90,21 +90,21 @@
                 <td class="py-2 px-4">
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class='bx bx-menu btn-menu'></i>
+                            <i class='bi bi-list btn-menu'></i>
                         </button>
                         <ul class="dropdown-menu">
                             
                             @can('is_user')   
                             @if ($data->status_check != "Disetujui")  
                             <li>       
-                                <a class="dropdown-item" href="{{ route('edit-laporan-surat-keluar', ['jenis' => $data->jenis_surat, 'slug' => $data->slug]) }}"><i class='btn btn-info bx bx-badge-check'></i></a>
+                                <a class="dropdown-item" href="{{ route('edit-laporan-surat-keluar', ['jenis' => $data->jenis_surat, 'slug' => $data->slug]) }}"><i class='btn btn-info bi bi-patch-plus'></i></a>
                             </li>
                             @endif
                             @endcan
                             
                             <li>
                                 <a class="dropdown-item" href="{{ route('show-detail-laporan', ['slug' => $data->slug, 'jenis' => $data->jenis_surat, 'status' => $data->status]) }}?from=/laporan/surat-keluar">
-                                    <i class='btn btn-warning bx bx-detail'></i>
+                                    <i class='btn btn-warning bi bi-card-list'></i>
                                 </a>
                             </li>
                             

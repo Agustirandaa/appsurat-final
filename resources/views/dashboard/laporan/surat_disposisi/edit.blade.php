@@ -114,16 +114,18 @@
                             <input type="text" name="slug" class="form-control mt-2" id="slug" value="{{ old('slug') }}"  aria-describedby="slug" required readonly>
                         </div> --}}
                         <div class="col form-group mb-2 d-flex justify-content-end">
-                            <a href="/laporan/surat-masuk/" role="button" class="btn btn-light fw-bolder me-4 d-flex align-items-center"> <i class='bx bx-left-arrow-alt fs-4'></i> Kembali </a>
-                            <button type="submit" class="btn btn-primary fw-bolder d-flex align-items-center"> Disposisi 
-                                {{-- <i class='bx bx-plus fs-4 ms-1'></i> --}}
-                            </button>
+                            <a href="/laporan/surat-masuk/" role="button" class="btn btn-light fw-bolder me-4">
+                                <i class='bi bi-arrow-left'></i> 
+                                Kembali </a>
+                                <button type="submit" class="btn btn-primary fw-bolder"> Disposisi 
+                                    <i class='bi bi-files'></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-@endsection
+    
+    @endsection
