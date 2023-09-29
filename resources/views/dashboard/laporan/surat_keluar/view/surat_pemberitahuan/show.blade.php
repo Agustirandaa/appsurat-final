@@ -16,7 +16,7 @@
 <div class="content-header mt-4 mb-2 rounded-top">
     <div class="row">
         <div class="col text-white d-flex align-items-center fs">
-            <i class='bx bx-envelope-open me-3 fs-4'></i>
+            <i class='bi bi-envelope-open me-3 fs-4'></i>
             <span>{{ $surat->nomor_surat }}</span>
         </div>
     </div>

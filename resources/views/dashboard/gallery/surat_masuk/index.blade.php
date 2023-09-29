@@ -11,6 +11,7 @@
     
     @foreach ($surats as $surat)
     
+    @if ($surat->status == 'Sudah didisposisi')
     <div class="col-md-2">
         <div class="card card-gallery mt-5 mb-2">
             <div class="card-body">
@@ -19,13 +20,13 @@
                     <span class="fw-bold">{{ $surat->nomor_surat }}</span>
                 </div>
                 <div class="col text-center mt-2">
-                    <a href="/gallery/surat-masuk/{{ $surat->slug }}" target="_blank" class="btn btn-sm btn-primary fs-6">View</a>
+                    <a href="/gallery/surat-masuk/{{ $surat->slug }}" target="_blank" class="btn btn-sm btn-primary fs-6">Lihat</a>
                 </div>
             </div>
             
         </div>
     </div>
-    
+    @endif
     
     @endforeach
     

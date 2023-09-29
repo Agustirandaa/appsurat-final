@@ -44,7 +44,7 @@
             </div>
             <span>Galery surat</span>
             <div class="item mb-5">
-                <a class="sub-btn-item d-flex align-items-center" href="#"><i class='bi bi-file-earmark-richtext'></i>Gallery Surat <i class='bi bi-chevron-right icon-dropdown'></i></a>
+                <a class="sub-btn-item d-flex align-items-center" href="#"><i class='bi bi-card-image'></i>Gallery Surat <i class='bi bi-chevron-right icon-dropdown'></i></a>
                 <div class="sub-menu">
                     <a href="/gallery/surat-masuk" class="sub-item"><i class='bi bi-download'></i>Surat Masuk</a>
                     <a href="/gallery/surat-keluar" class="sub-item"><i class='bi bi-upload'></i>Surat Keluar</a>

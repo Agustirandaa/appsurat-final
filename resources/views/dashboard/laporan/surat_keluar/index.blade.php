@@ -24,9 +24,9 @@
 @endif
 
 <div class="content-header mt-4 rounded-top">
-    <div class="row gap-2">
+    <div class="row">
         <div class="col-1" >
-            <select id="showEntries" class="form-select border-0" onchange="changePageLength()">
+            <select id="showEntries" class="form-select" onchange="changePageLength()">
                 <option selected value="100">Show All</option>
                 <option value="10">10</option>
                 <option value="25">25</option>
@@ -34,19 +34,19 @@
                 <option value="100">100</option>
             </select>
         </div>
-        <div class="col-1">
+        <div class="col-1 ms-3">
             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#searchFilterLaporanSuratKeluar">
                 Filters
             </button>
         </div>
         
         <div class="col d-flex justify-content-end">  
-            <div class="col-1">
+            <div class="col-1 me-3 d-flex justify-content-end">
                 <a href="{{ route('printsuratkeluar', ['start_date' => request('start_date'), 'end_date' => request('end_date'), 'semester' => request('semester')]) }}" target="_blank" role="button" class="btn btn-light">
                     <i class='bi bi-printer'></i>
                 </a>      
             </div>
-            <div class="col-lg-3">
+            <div class="col-sm-3">
                 <div class="input-group">     
                     <input type="text" class="form-control border-0" name="search" id="searchInput"  placeholder="Search..." aria-label="Search" aria-describedby="search" autocomplete="off">
                     <span class="input-group-text border-0 bg-white" id="search"><i class='bi bi-search'></i></span>

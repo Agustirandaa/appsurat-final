@@ -33,7 +33,7 @@ class TransaksiSuratMasukController extends Controller
     public function create()
     {
         return view('dashboard.transaksi.surat_masuk.create', [
-            'title' =>  'Create surat masuk'
+            'title' =>  'Tambah surat masuk'
         ]);
     }
 
@@ -44,7 +44,7 @@ class TransaksiSuratMasukController extends Controller
     {
 
         $validateData = $request->validate([
-            'pengirim' => 'required|max:30',
+            'pengirim' => 'required|max:150',
             'nomor_surat' => 'required|max:60',
             'slug' => 'required|unique:surat_masuks',
             'sifat_surat' => 'required|max:10',
@@ -101,7 +101,7 @@ class TransaksiSuratMasukController extends Controller
     public function update(Request $request, SuratMasuk $suratMasuk)
     {
         $rules = [
-            'pengirim' => 'required|max:30',
+            'pengirim' => 'required|max:150',
             'nomor_surat' => 'required|max:60',
             'sifat_surat' => 'required|max:10',
             'tanggal_surat' => 'required',

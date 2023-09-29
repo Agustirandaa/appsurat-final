@@ -25,12 +25,12 @@ $showDotNotif = $jumlahSuratBelumDidisposisi + $jumlahSuratBelumDicek + $jumlahS
                 <a class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class='bi bi-bell'></i>
                 </a>
-                <ul class="dropdown-menu" style="width: 20vw">
+                <ul class="dropdown-menu" style="--bs-dropdown-min-width: 20rem;">
                     <li class="dropdown-item">
                         <h5 class="fw-bold">Surat Masuk</h5>
                         <div class="row">
                             <div class="col-9">
-                                Jumlah surat yang belum didisposisikan
+                                Belum didisposisikan
                             </div>
                             <div class="col">
                                 <span class="text-danger">: {{  $jumlahSuratBelumDidisposisi }}</span>
@@ -42,7 +42,7 @@ $showDotNotif = $jumlahSuratBelumDidisposisi + $jumlahSuratBelumDicek + $jumlahS
                         <h5 class="fw-bold">Surat Keluar</h5>
                         <div class="row">
                             <div class="col-9">
-                                Jumlah surat yang belum dicek
+                                Belum dicek
                             </div>
                             <div class="col">
                                 <span class="text-danger">: {{  $jumlahSuratBelumDicek }}</span>
@@ -51,7 +51,7 @@ $showDotNotif = $jumlahSuratBelumDidisposisi + $jumlahSuratBelumDicek + $jumlahS
                         
                         <div class="row">
                             <div class="col-9">
-                                Jumlah surat yang tidak disetujui
+                                Tidak disetujui
                             </div>
                             <div class="col">
                                 <span class="text-danger">: {{  $jumlahSuratTidakDisetujui }}</span>

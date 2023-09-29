@@ -31,7 +31,7 @@ class TransaksiSuratKeluarController extends Controller
         $nextNomorSurat = SuratKeluar::generateNomorSurat();
 
         return view('dashboard.transaksi.surat_keluar.create', [
-            'title' => 'Create surat keluar',
+            'title' => 'Tambah surat keluar',
             'nextNomorSurat' => $nextNomorSurat,
         ]);
     }

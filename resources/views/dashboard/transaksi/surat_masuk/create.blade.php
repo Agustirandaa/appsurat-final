@@ -23,6 +23,7 @@
                                 {{ $message }}
                             </div> 
                             @enderror
+                            <div id="pengirim" class="form-text">Nama pengirim tidak boleh kosong</div>
                         </div>
                         <div class="col-sm-4 form-group">
                             <label for="sifat_surat"> Sifat surat</label>
@@ -47,7 +48,9 @@
                                 {{ $message }}
                             </div> 
                             @enderror
+                            <div id="nomor_surat" class="form-text">Nomor surat tidak boleh kosong</div>
                         </div>
+                        
                         <div class="col-sm-4 form-group">
                             <label for="tanggal_surat"> Tanggal Surat</label>
                             <input type="date" name="tanggal_surat" class="form-control mt-2 @error('tanggal_surat')
@@ -58,6 +61,7 @@
                                 {{ $message }}
                             </div> 
                             @enderror
+                            <div id="tanggal_surat" class="form-text">Tanggal surat tidak boleh kosong</div>
                         </div>
                     </div>
                     
@@ -91,6 +95,7 @@
                                 {{ $message }}
                             </div> 
                             @enderror
+                            <div id="tanggal_diterima" class="form-text">Tanggal diterima tidak boleh kosong</div>
                         </div>
                     </div>
                     
@@ -105,6 +110,7 @@
                                 {{ $message }}
                             </div> 
                             @enderror
+                            <div id="perihal_surat" class="form-text">Perihal surat tidak boleh kosong</div>
                         </div>
                     </div>
                     
@@ -114,25 +120,26 @@
                             <img class="img-preview img-fluid mt-2 d-block col-sm-9">
                             <input type="file" name="image" class="form-control mt-2 @error('image')
                             is-invalid
-                            @enderror" id="image" aria-describedby="image" required onchange="imagePreview()">
+                            @enderror" id="image" aria-describedby="image" onchange="imagePreview()" required>
                             @error('image')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div> 
                             @enderror
+                            <div id="image" class="form-text">Maksimal gambar 1MB / 1024KB</div>
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-sm-6">
-                            <input type="hidden" name="slug" class="form-control mt-2" id="slug" value="{{ old('slug') }}"  aria-describedby="slug" required readonly>
+                            <input type="text" name="slug" class="form-control mt-2" id="slug" value="{{ old('slug') }}"  aria-describedby="slug"  readonly>
                         </div>
                         <div class="col-sm-6 form-group mb-2 d-flex justify-content-end">
                             <a href="/transaksi/surat-masuk/" role="button" class="btn btn-light fw-bolder me-4 "> 
                                 <i class='bi bi-arrow-left'></i> 
                                 Kembali 
                             </a>
-                            <button type="submit" class="btn btn-primary fw-bolder"> Tambah 
-                                <i class='bi bi-plus-lg'></i>
+                            <button type="submit" class="btn btn-primary fw-bolder"> Simpan 
+                                <i class='bi bi-save'></i>
                             </button>
                         </div>
                     </div>

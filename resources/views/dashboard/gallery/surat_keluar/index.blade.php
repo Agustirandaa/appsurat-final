@@ -11,6 +11,7 @@
     
     @foreach ($surats as $surat)
     
+    @if ($surat->status_check == 'Disetujui')
     <div class="col-md-2">
         <div class="card card-gallery mt-5 mb-2">
             <div class="card-body ">
@@ -29,6 +30,7 @@
             
         </div>
     </div>
+    @endif
     
     
     @endforeach
